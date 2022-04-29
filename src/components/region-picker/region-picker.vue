@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import region from '../../assets/data/region.json'
 export default {
   props: {
     title: {
@@ -73,7 +74,7 @@ export default {
   methods: {
     open() {
       this.value = [0, 0, 0]
-      this.provincesList = JSON.parse(uni.getStorageSync('areaList') || '[]')
+      this.provincesList = region
       this.cityList = this.provincesList.length ? this.provincesList[0].children : []
       this.areaList = this.cityList.length ? this.cityList[0].children : []
       this.$refs.regionPopup.open()

@@ -9,9 +9,15 @@
   "pages": [
     // pages数组中第一项表示应用启动页，请不要随意调动顺序（小程序端注意活用调试模式），参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "sub-packages/sample/pages/index",
+      "path": "pages/index",
       "style": {
         "navigationBarTitleText": "组件示例"
+      }
+    },
+    {
+      "path": "pages/mine",
+      "style": {
+        "navigationBarTitleText": "占位"
       }
     }
   ], 
@@ -20,12 +26,6 @@
     {
       "root": "sub-packages/sample",
       "pages": [
-        {
-          "path": "pages/index",
-          "style": {
-            "navigationBarTitleText": "组件示例"
-          }
-        },
         {
           "path": "pages/slide-verify",
           "style": {
@@ -119,6 +119,12 @@
     "selectedColor": "#1890ff",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
-    "list": []
+    "list": [{
+      "pagePath": "pages/index",
+      "text": "组件示例"
+    }, {
+      "pagePath": "pages/mine",
+      "text": "占位"
+    }]
   }
 }

@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import region from '../../assets/data/region.json'
 export default {
   props: {
     title: {
@@ -52,7 +53,7 @@ export default {
   methods: {
     // 获取地址信息
     getRegionList() {
-      this.provincesList = JSON.parse(uni.getStorageSync('areaList') || '[]')
+      this.provincesList = region
       this.cityList = this.provincesList.length ? this.provincesList[0].children : []
       // this.areaList = this.cityList.length ? this.cityList[0].children : []
       this.sengMessage() // 默认选中的省份和城市
