@@ -68,11 +68,6 @@
             "compileHotReLoad" : false,
             "minified" : true
         },
-        "permission" : {
-            "scope.userLocation" : {
-                "desc" : ""
-            }
-        },
         "usingComponents" : true
     },
     "mp-alipay" : {

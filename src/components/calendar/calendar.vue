@@ -1,5 +1,5 @@
 <!--
- * @file: 日历组件
+ * @file: 日历组件---暂时只兼容H5,app
 -->
 
 <template>
@@ -174,7 +174,7 @@ export default {
 }
 
 .ishighlight {
-  background: #1890ff;
+  background: #FF3167;
   color: #ffffff;
   border-radius: 50%;
 }

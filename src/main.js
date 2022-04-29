@@ -15,10 +15,7 @@ App.mpType = 'app'
 
 console.info(process.env.VUE_APP_DOMAIN, '============================')
 
-// 获取地区列表
-if(!uni.getStorageSync('areaList')) {
- store.dispatch('getAreaList')
-}
+
 // 初始化权限控制
 Vue.mixin(auth)
 Vue.mixin(mixin)
