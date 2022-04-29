@@ -1,0 +1,22 @@
+/*
+ * @file: 公用样式
+ */
+.is-hide {
+  display: none !important;
+}
+// uview输入框placeholder颜色覆盖
+.uni-input-placeholder {
+  color: #AAAAAA !important;
+}
+
+// 树形结构
+.c-tree-list {
+  .u-checkbox__icon-wrap {
+    margin: 32rpx 24rpx 32rpx 32rpx;
+  }
+  &.c-tree-list--large {
+    .u-checkbox__icon-wrap {
+      margin: 54rpx 24rpx 54rpx 32rpx;
+    }
+  }
+}

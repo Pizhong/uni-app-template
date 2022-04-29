@@ -1,0 +1,124 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue",
+      "^l-(.*)": "@/components/$1/$1.vue"
+    }
+  },
+  "pages": [
+    // pages数组中第一项表示应用启动页，请不要随意调动顺序（小程序端注意活用调试模式），参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "sub-packages/sample/pages/index",
+      "style": {
+        "navigationBarTitleText": "组件示例"
+      }
+    }
+  ], 
+  // 分包
+  "subPackages": [
+    {
+      "root": "sub-packages/sample",
+      "pages": [
+        {
+          "path": "pages/index",
+          "style": {
+            "navigationBarTitleText": "组件示例"
+          }
+        },
+        {
+          "path": "pages/slide-verify",
+          "style": {
+            "navigationBarTitleText": "滑动验证"
+          }
+        },
+        {
+          "path": "pages/fab",
+          "style": {
+            "navigationBarTitleText": "悬浮组件"
+          }
+        },
+        {
+          "path": "pages/keyboard",
+          "style": {
+            "navigationBarTitleText": "支付键盘组件"
+          }
+        },
+        {
+          "path": "pages/popup",
+          "style": {
+            "navigationBarTitleText": "底部弹窗组件"
+          }
+        },
+        {
+          "path": "pages/calendar",
+          "style": {
+            "navigationBarTitleText": "日历组件"
+          }
+        },
+        {
+          "path": "pages/footer",
+          "style": {
+            "navigationBarTitleText": "吸底组件"
+          }
+        },
+        {
+          "path": "pages/date-picker",
+          "style": {
+            "navigationBarTitleText": "日期选择组件"
+          }
+        },
+        {
+          "path": "pages/time-picker",
+          "style": {
+            "navigationBarTitleText": "时间选择组件"
+          }
+        },
+        {
+          "path": "pages/region-picker",
+          "style": {
+            "navigationBarTitleText": "地址选择组件"
+          }
+        },
+        {
+          "path": "pages/chooce-region",
+          "style": {
+            "navigationBarTitleText": "地址选择组件(点击)"
+          }
+        },
+        {
+          "path": "pages/range-date-picker",
+          "style": {
+            "navigationBarTitleText": "日期区间选择器"
+          }
+        },
+        {
+          "path": "pages/tree",
+          "style": {
+            "navigationBarTitleText": "树形组件示例"
+          }
+        },
+        {
+          "path": "pages/tree-checkbox",
+          "style": {
+            "navigationBarTitleText": "联动多选框示例"
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "default",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Title",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1890ff",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": []
+  }
+}

@@ -1,0 +1,25 @@
+@import 'uview-ui/theme.scss';
+/**
+ * 主题配置
+ * 可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+$color-main: #1890ff; // 主色: 用于指示性强烈的控件以及标签,在特定场景下需要重点突出的信息
+$color-assist: #f77033; // 辅助色: 用于标签颜色,或在特定场景下需要重点突出的信息
+
+$text-color: #1c2946; // 用于重要级文章信息、内页标题信息
+$text-color-inverse: #ffffff; // 反色
+$text-color-nomal: #66728a; // 用于普通级的文字信息
+$text-color-assist: #9fa6b5; // 用于辅助、次要的文字信息以及输入框内默认字体颜色
+
+$border-color-cancel: #e9e9e9; // 取消、拒绝按钮等边框颜色
+$border-color-line: #f2f2f2; // 分割线
+$background-color: #ffffff; // 用于内容区域底色以及卡片底色
+$background-color-separate: #f7f8fc; // 用于分割模块的底色
+
+$font-size-title-lg: 40rpx; // 信息弹窗标题
+$font-size-title-middle: 34rpx; // 导航栏标题/编辑弹窗标题
+$font-size-title: 32rpx; // 一级标题, 重要模块标题
+$font-size-text-lg: 30rpx; // 正文, 列表页文本/重要信息文本
+$font-size-text: 28rpx; // 正文, 按钮/普通消息文本/模块间标题
+$font-size-subtext: 24rpx; // 辅助文本1, 默认字号
+$font-size-subtext-sm: 20rpx; // tabbar 文本、标签辅助
