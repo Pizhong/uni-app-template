@@ -50,7 +50,7 @@ export default {
       default: 'yyyy-MM-dd', // 返回日期格式
     },
     value: {
-      type: Date,
+      type: [Date, String],
       default() {
         return new Date()
       },
@@ -109,13 +109,16 @@ export default {
   methods: {
     bindChange: function(e) {
       const val = e.detail.value
+      console.info(e)
       this.year = this.years[val[0]]
       this.month = this.months[val[1]] - 1
       this.day = this.days[val[2]]
+      // 兼容微信小程序
+      // this.day在微信小程序上为undefined，所以暂时复制为1
       this.pageDate = new Date(
         this.year,
         this.month,
-        this.day
+        this.day || 1
       )
       this.setCurrentDate()
     },

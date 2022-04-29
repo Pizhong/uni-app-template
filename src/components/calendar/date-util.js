@@ -25,8 +25,9 @@ export const daysInMonth = (year, month) => {
 
 /* 判断是否为同一天 */
 export const compareDates = (date1, date2) => {
+  const currentDate = new Date(date2)
   const d1 = new Date(date1.getTime());
-  const d2 = new Date(date2.getTime());
+  const d2 = new Date(currentDate.getTime());
   d1.setHours(0, 0, 0, 0);
   d2.setHours(0, 0, 0, 0);
   return d1.getTime() === d2.getTime();

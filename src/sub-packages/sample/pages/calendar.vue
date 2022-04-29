@@ -14,6 +14,9 @@ export default {
       checkDate: new Date(),
     }
   },
+  onLoad() {
+    console.info(new Date())
+  },
   methods: {
     onSelected(value) {
       console.info(value)
