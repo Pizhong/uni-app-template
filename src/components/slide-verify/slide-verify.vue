@@ -211,7 +211,7 @@ export default {
         width: 101rpx;
         background-color: #fff;
         box-shadow: 0 0 10rpx 0rpx rgba(0,0,0,.2);
-        background-image: url(img/icon-arrows.png);
+        background-image: url('/static/images/icon-arrows.png');
         background-size: 34rpx;
         background-position: center;
         background-repeat: no-repeat;

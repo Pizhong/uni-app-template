@@ -5,7 +5,7 @@
   <view v-show="showKey" class="c-keyborad">
     <view class="c-keyborad-main" :style="{transform:showKey?'translateY(0)':'translateY(100%)'}">
       <view class="c-keyborad-main_title">
-        <image src="./img/del_1.png" mode="aspectFill" @tap="hideFun" />
+        <image src="/static/images/del_1.png" mode="aspectFill" @tap="hideFun" />
         <text>请输入支付密码</text>
       </view>
       <view class="c-keyborad-main_content">
@@ -26,7 +26,7 @@
         <view class="c-keyborad-key_null" />
         <view class="c-keyborad-key_0" @tap="inputNumFun({num:0})">0</view>
         <view class="c-keyborad-key_del" @tap="delNumFun">
-          <image src="./img/del_2.png" mode="aspectFill" />
+          <image src="/static/images/del_2.png" mode="aspectFill" />
         </view>
       </view>
     </view>

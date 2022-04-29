@@ -70,7 +70,7 @@ export default {
         },
         {
           title: '联动选择框示例',
-          url: '/sub-packages/sample/pages/tree'
+          url: '/sub-packages/sample/pages/tree-checkbox'
         }
       ]
     }

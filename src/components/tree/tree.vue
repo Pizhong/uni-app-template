@@ -34,7 +34,7 @@
               <text class="c-tree-value">{{ item.value }}</text>
               <image
                 v-if="isEdit"
-                src="./images/edit-active.png"
+                src="/static/images/edit-active.png"
                 class="c-tree-edit"
                 @click.stop="edit(item)"
               />
@@ -74,7 +74,7 @@ export default {
     // 箭头图片
     arrowIcon: {
       type: String,
-      default: './images/down.png'
+      default: '/static/images/down.png'
     },
     // 是否显示左侧箭头
     isArrow: {
@@ -131,7 +131,7 @@ export default {
     return {
       listData: [],
       checked: [],
-      defaultIcon: './images/department.png',
+      defaultIcon: '/static/images/department.png',
       tempList: [] // 缓存数据,用于缓存数据更新前列表的展开状态, 数据更新后恢复状态
     }
   },
