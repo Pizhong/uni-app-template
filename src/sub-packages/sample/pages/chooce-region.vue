@@ -5,7 +5,12 @@
   <view>
     <u-button text="click" type="primary" @click="show = !show" />
     <view class="box">
-      <l-chooce-region v-if="show" @chooce="getRegion" />
+      <l-chooce-region
+        v-if="show"
+        :current-pro-index.sync="currentProIndex"
+        :current-city-index.sync="currentCityIndex"
+        @chooce="getRegion"
+      />
     </view>
   </view>
 </template>
@@ -15,12 +20,14 @@ export default {
   data() {
     return {
       show: false,
+      currentProIndex: 0,
+      currentCityIndex: 0
     }
   },
   methods: {
     // 获得地址
     getRegion(v) {
-      console.info(v, 'hhhhh')
+      uni.showToast({ title: `${v.province.name}${v.city.name}`, icon: 'none' })
     },
   }
 }

@@ -25,12 +25,15 @@
 </template>
 
 <script>
-import region from '../../assets/data/region.json'
 export default {
   props: {
-    title: {
-      type: String,
-      default: ''
+    currentProIndex: {
+      type: [Number, String],
+      default: 0
+    },
+    currentCityIndex: {
+      type: [Number, String],
+      default: 0
     }
   },
 
@@ -46,15 +49,28 @@ export default {
       cityIndex: 0, // 当前选中的城市
     }
   },
+  watch: {
+    currentProIndex: {
+      handler: function(newVal) {
+        this.proIndex = newVal
+      },
+      immediate: true
+    },
+    currentCityIndex: {
+      handler: function(newVal) {
+        this.cityIndex = newVal
+      },
+      immediate: true
+    }
+  },
   created() {
     this.getRegionList()
   },
-
   methods: {
     // 获取地址信息
     getRegionList() {
-      this.provincesList = region
-      this.cityList = this.provincesList.length ? this.provincesList[0].children : []
+      this.provincesList = JSON.parse(uni.getStorageSync('areaList') || '[]')
+      this.cityList = this.provincesList.length ? this.provincesList[this.proIndex].children : []
       // this.areaList = this.cityList.length ? this.cityList[0].children : []
       this.sengMessage() // 默认选中的省份和城市
     },
@@ -74,6 +90,8 @@ export default {
     sengMessage() {
       const province = this.provincesList[this.proIndex]
       const city = province.children && province.children[this.cityIndex]
+      this.$emit('update:currentProIndex', this.proIndex)
+      this.$emit('update:currentCityIndex', this.cityIndex)
       this.$emit('chooce', {
         province: {
           name: province.name,
