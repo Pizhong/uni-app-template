@@ -52,10 +52,6 @@ npm run build:mp-weixin
 
 ```
 |---- dist                              build或者开发环境非h5环境下运行，编译后的各平台代码存放目录
-|---- docs                              [可选]文档存放目录，组件文档存放位置
-|      |---- .vuepress                  vuepress配置文件
-|      |---- pages                      文档文件存放目录
-|      └---- README.md                  文档首页
 |---- mock                              [可选]接口请求mock数据
 |---- public                            内有一个 index.html，是h5页面模板，用于项目生成 html 代码
 |---- src
